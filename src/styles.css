@@ -1,1 +1,228 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Poppins";
+    background: rgb(255, 203, 203);
+    padding-bottom: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+nav {
+    padding: 20px 0px;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    top: 0px;
+    max-width: 1920px;
+    justify-content: space-between;
+    background: rgb(255, 168, 168);
+    align-items: center;
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+}
+
+nav ul{
+    padding: 0px 10px;
+    margin: 0px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul:first-of-type li a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(255, 203, 203);
+}
+
+nav ul:last-of-type li {
+    display: inline-block;
+    margin-right: 10px;
+}
+nav ul li a {
+    color: #222;
+    text-decoration: none;
+}
+header {
+    position: relative;
+    height: 400px;
+    background: url("./assets/lisa-knight-1462889-unsplash.jpg");
+    background-size: 100%;
+    background-position-y: -400px;
+}
+
+header h1 {
+    padding-top: 120px;
+    margin: 0px;
+    font-size:4rem;
+    text-transform: uppercase;
+    line-height: 4rem;
+    padding-left: 70px;
+    width: 80%;
+   
+   
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.addpost h2 {
+    margin-top: 100px;
+}
+.cardsContainer {
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.mat-card, .mat-stepper-horizontal, .mat-form-field, .mat-button {
+    font-family: Poppins;
+}
+.mat-button{
+    font-weight: bold;
+} 
+
+.mat-card-actions {
+    border-top: 1px solid mistyrose;
+    text-align: center;
+}
+.mat-form-field {
+    width: 100%;
+    display: block;
+}
+
+.mat-card, .mat-stepper-horizontal{
+    background: rgb(255, 168, 168);
+ 
+}
+
+.mat-card {
+    margin: 10px;
+    color: #222;
+    border-radius: 0px !important;
+    border-bottom: 3px solid rgb(128, 255, 177);
+    max-width: 400px;
+    width: 100%;
+    
+}
+.mat-step-icon {
+    background: rgb(199, 255, 220) !important;
+   color: #222 !important;
+  
+}
+
+.mat-step-icon-selected {
+    background: rgb(79, 255, 146) !important;
+}
+
+.mat-stepper-horizontal {
+    width: 60%;
+    margin: auto;
+  
+}
+i.material-icons {
+    color: rgb(255, 203, 203);
+    font-size: 1.2rem;
+    margin-right: 2px;
+   
+}
+input[type="file"] {
+    display: none;
+}
+label.cover {
+    display: block;
+    width: 30%;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #222;
+    text-indent: 10px;
+    margin-bottom: 40px;
+}
+
+label i.material-icons {
+    color: #222;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    max-width: 300px;
+    position: absolute;
+   right: 0px;
+   top: -10px;
+}
+
+.searchBox i {
+    color: rgb(255, 136, 136);
+    font-size: 1.4rem;
+}
+
+.previewImage {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+}
+.spinnerMessage {
+    display: flex;
+    align-items: center;
+}
+
+
+.mat-spinner.mat-progress-spinner.mat-primary.mat-progress-spinner-indeterminate-animation, svg{
+    width: 20px !important;
+    height: 20px !important;
+    display: inline-block;
+    margin-right: 10px;
+   }
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #fff;
+}
+
+.mat-dialog-container {
+    background: rgb(255, 210, 210);
+    text-align: center;
+}
+
+.mat-dialog-container img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    
+}
+.mat-dialog-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-dialog-actions button {
+    display: inline-block;
+}
+
+.submit:disabled {
+    background: rgb(255, 136, 136);
+    cursor: not-allowed;
+}
+
+.submit {
+    background: rgb(255, 210, 210);
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #222;
+}

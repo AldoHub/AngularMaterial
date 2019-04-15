@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>{{data["post"]["title"]}}</h1>
+<div mat-dialog-content>
+  <img src="{{data['post']['image']}}" />
+ <p>{{data["post"]["content"]}}</p>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button [mat-dialog-close]="data['post']" cdkFocusInitial>Do something</button>
+</div>

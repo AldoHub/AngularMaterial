@@ -1,0 +1,54 @@
+
+<section class="addpost">
+  <h2>Add A New Post</h2>
+
+  <mat-horizontal-stepper [linear]="true" #stepper>
+    <mat-step [stepControl]="details" >
+      <form [formGroup]="details" >
+        <ng-template matStepLabel>Post Details</ng-template>
+        <mat-form-field>
+          <input matInput formControlName="title" placeholder="Post Title">
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput formControlName="content" placeholder="Post Content"></textarea>
+        </mat-form-field>
+        <div>
+          <button [disabled]="!details.valid" mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+  
+    <mat-step [stepControl]="cover">
+      <form [formGroup]="cover">
+      <ng-template matStepLabel>Post Cover</ng-template>
+      <div class="fileUpload">
+        <label for="cover" class="cover"><i class="material-icons">
+            attach_file
+            </i> Choose a file</label>
+        <input type="file" formControlName="cover" name="cover" id="cover" (change)="handleInput($event)">
+        
+        <button [disabled]="!cover.valid" class="submit" type="submit" (click)="sendData()">Finish Post</button>
+
+        <div class="spinnerMessage" *ngIf="percentage">
+            <mat-spinner></mat-spinner>
+            <p>Creating Post, Wait A Moment, Please</p>
+        </div>
+
+        <div *ngIf="imageURL">
+          <p>{{image[0].name}}</p>
+          <img class="previewImage" [src]="imageURL" />
+        </div>
+      
+ 
+ 
+
+      </div>
+
+     
+
+         </form>
+    </mat-step>
+
+    
+  </mat-horizontal-stepper>
+</section>
